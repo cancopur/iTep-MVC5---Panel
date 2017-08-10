@@ -1,0 +1,123 @@
+﻿@model IEnumerable<iTep.Models.Applicant>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.TestDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TestID)
+        </th>
+        <th>
+           @Html.DisplayNameFor(model => model.Result)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Overall_Level)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Grammar_Score)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Grammar_Level)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Listening_Score)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Listening_Level)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Reading_Score)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Reading_Level)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Writing_Score)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Writing_Level)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Speaking_Score)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Speaking_Level)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.TestDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TestID)
+        </td>
+        <td>
+            @if (item.calculated)
+            { 
+                @Html.DisplayFor(modelItem => item.Result) 
+            }
+            else 
+            {
+                @Html.DisplayFor(modelItem => "Not Calculated!")
+            }
+            
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Overall_Level)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Grammar_Score)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Grammar_Level)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Listening_Score)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Listening_Level)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Reading_Score)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Reading_Level)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Writing_Score)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Writing_Level)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Speaking_Score)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Speaking_Level)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>

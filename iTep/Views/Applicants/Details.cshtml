@@ -1,0 +1,122 @@
+﻿@model iTep.Models.Applicant
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Applicant</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TestDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TestDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TestID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TestID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Overall_Level)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Overall_Level)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Grammar_Score)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Grammar_Score)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Grammar_Level)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Grammar_Level)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Listening_Score)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Listening_Score)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Listening_Level)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Listening_Level)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Reading_Score)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Reading_Score)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Reading_Level)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Reading_Level)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Writing_Score)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Writing_Score)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Writing_Level)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Writing_Level)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Speaking_Score)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Speaking_Score)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Speaking_Level)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Speaking_Level)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
