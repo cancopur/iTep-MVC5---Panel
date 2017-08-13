@@ -13,6 +13,10 @@ namespace iTep.Controllers
             return Redirect("/iTep/Applicants");
         }
         
+        public ActionResult Login(String id, String pw){
+            return View();
+        }
+        
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";
