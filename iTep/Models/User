@@ -1,0 +1,36 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.Data.Entity;
+using System.Data.Entity.ModelConfiguration.Conventions;
+using System.Linq;
+using System.Web;
+using iTep.Models;
+
+namespace iTep.Models
+{
+    public class ApplicantContext : DbContext
+    {
+        public ApplicantContext() : base("ApplicantContext")
+        {
+
+        }
+
+        public DbSet<Applicant> Applicants { get; set; }
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
+        }
+    }
+
+    [Table("ItepWebhookResults")]
+    public class User
+    {
+       public login(String id, String pw){
+          return true;
+       }
+    }
+}
